@@ -41,7 +41,22 @@ def cargar_eventos(db: Database, ruta: Path, lote: int = 500) -> int:
     una mayoría de miembros tenga el lote. No hace falta repetirlo aquí, pero en el
     informe debe poder explicar qué esperó cada llamada.
     """
-    raise NotImplementedError("TODO 1: cargar_eventos")
+    total = 0
+    batch: list[dict] = []
+    with ruta.open(encoding="utf-8") as f:
+        for linea in f:
+            linea = linea.strip()
+            if not linea:
+                continue
+            batch.append(json.loads(linea))  # conserva el _id del documento
+            if len(batch) >= lote:
+                res = db.eventos.insert_many(batch, ordered=False)
+                total += len(res.inserted_ids)
+                batch = []
+    if batch:  # último lote, normalmente incompleto
+        res = db.eventos.insert_many(batch, ordered=False)
+        total += len(res.inserted_ids)
+    return total
 
 
 def crear_indices(db: Database) -> list[str]:
@@ -63,7 +78,9 @@ def crear_indices(db: Database) -> list[str]:
 
     Use ``create_index`` con una lista de pares ``(campo, ASCENDING)``.
     """
-    raise NotImplementedError("TODO 2: crear_indices")
+    n1 = db.eventos.create_index([("categoria", ASCENDING), ("fecha", ASCENDING)])
+    n2 = db.ordenes.create_index([("evento_id", ASCENDING), ("estado", ASCENDING)])
+    return [n1, n2]
 
 
 def verificar_carga(db: Database, devueltos: int, m: dict) -> bool:
