@@ -1,0 +1,3 @@
+OK: caso sintético 1
+OK: caso sintético 2
+OK: caso sintético 3

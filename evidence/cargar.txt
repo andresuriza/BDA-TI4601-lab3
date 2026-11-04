@@ -1,0 +1,9 @@
+ Container ti4601-app-mongo-run-65e94763cb82 Creating 
+ Container ti4601-app-mongo-run-65e94763cb82 Created 
+Escritura por defecto de este cliente: {'w': 'majority'}
+OK: cargar_eventos devolvió 400 documentos
+OK: la colección eventos tiene 400 documentos (mayoría confirmó cada lote)
+OK: zonas (1189) y capacidad total (162810) coinciden
+Carga: 0.17 s (2379 documentos/s)
+OK: índice eventos[('categoria', 1), ('fecha', 1)] presente
+OK: índice ordenes[('evento_id', 1), ('estado', 1)] presente

@@ -1,0 +1,5 @@
+
+Intentos: 20 · confirmados: 20 · errores: 0
+No se leyó señal de falla: no se calcula RTO.
+
+Evidencia: evidence/rpo-baseline.csv  (run=r90304e81)

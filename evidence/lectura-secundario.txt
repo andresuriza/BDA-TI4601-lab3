@@ -1,0 +1,9 @@
+ Container ti4601-app-mongo-run-94afc6488154 Creating 
+ Container ti4601-app-mongo-run-94afc6488154 Created 
+modo                        n  obsoletas  % obsoletas
+w1_secundario             500        479        95.8%
+majority_secundario       500          3         0.6%
+causal_majority           500          0         0.0%
+
+Resumen: evidence/lectura-secundario.csv
+Recuerde: los tres miembros comparten una computadora; en una red real el retraso de replicación sería mayor.

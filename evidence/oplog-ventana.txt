@@ -1,0 +1,28 @@
+# 2026-10-30T22:16:35-06:00  docker exec ti4601-mongo-2 mongosh --quiet --eval 'printjson(db.getReplicationInfo()); rs.printReplicationInfo();'
+{
+  configuredLogSizeMB: 48352.936767578125,
+  logSizeMB: 48352.936767578125,
+  usedMB: 9.31,
+  timeDiff: 10719,
+  timeDiffHours: 2.98,
+  tFirst: 'Sat Oct 31 2026 01:17:57 GMT+0000 (Coordinated Universal Time)',
+  tLast: 'Sat Oct 31 2026 04:16:36 GMT+0000 (Coordinated Universal Time)',
+  now: 'Sat Oct 31 2026 04:16:36 GMT+0000 (Coordinated Universal Time)'
+}
+actual oplog size
+'48352.936767578125 MB'
+---
+configured oplog size
+'48352.936767578125 MB'
+---
+log length start to end
+'10719 secs (2.98 hrs)'
+---
+oplog first event time
+'Sat Oct 31 2026 01:17:57 GMT+0000 (Coordinated Universal Time)'
+---
+oplog last event time
+'Sat Oct 31 2026 04:16:36 GMT+0000 (Coordinated Universal Time)'
+---
+now
+'Sat Oct 31 2026 04:16:36 GMT+0000 (Coordinated Universal Time)'

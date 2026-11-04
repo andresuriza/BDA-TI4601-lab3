@@ -1,0 +1,32 @@
+$ rs.status()
+NotYetInitialized: no replset config has been received
+
+$ rs.initiate(...)
+{
+  ok: 1,
+  '$clusterTime': {
+    clusterTime: Timestamp({ t: 1793409477, i: 1 }),
+    signature: {
+      hash: Binary.createFromBase64('AAAAAAAAAAAAAAAAAAAAAAAAAAA=', 0),
+      keyId: Long('0')
+    }
+  },
+  operationTime: Timestamp({ t: 1793409477, i: 1 })
+}
+[
+  {
+    name: 'mongo-1:27017',
+    state: 'PRIMARY',
+    health: 1
+  },
+  {
+    name: 'mongo-2:27017',
+    state: 'SECONDARY',
+    health: 1
+  },
+  {
+    name: 'mongo-3:27017',
+    state: 'SECONDARY',
+    health: 1
+  }
+]

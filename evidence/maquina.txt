@@ -1,0 +1,13 @@
+== docker info
+ServerVersion=29.9.2
+NCPU=12
+MemTotal=16589729792
+OperatingSystem=Docker Desktop
+KernelVersion=6.6.87.2-microsoft-standard-WSL2
+== host OS
+
+Microsoft Windows [Version 10.0.26200.9711]
+Caption : Microsoft Windows 11 Pro
+Version : 10.0.26200
+CPU: 13th Gen Intel(R) Core(TM) i7-1365U
+RAM total GB: 31.7

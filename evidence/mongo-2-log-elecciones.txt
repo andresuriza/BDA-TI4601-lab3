@@ -1,0 +1,13 @@
+{"t":{"$date":"2026-10-31T01:27:20.021+00:00"},"s":"I",  "c":"ELECTION", "id":4615652, "ctx":"ReplCoord-11","msg":"Starting an election, since we've seen no PRIMARY in election timeout period","attr":{"electionTimeoutPeriodMillis":10000}}
+{"t":{"$date":"2026-10-31T01:27:20.036+00:00"},"s":"I",  "c":"ELECTION", "id":21450,   "ctx":"ReplCoord-11","msg":"Election succeeded, assuming primary role","attr":{"term":2}}
+{"t":{"$date":"2026-10-31T01:27:30.048+00:00"},"s":"I",  "c":"REPL",     "id":6015310, "ctx":"OplogApplier-0","msg":"Starting to transition to primary."}
+{"t":{"$date":"2026-10-31T01:27:30.055+00:00"},"s":"I",  "c":"REPL",     "id":6015309, "ctx":"OplogApplier-0","msg":"Logging transition to primary to oplog on stepup"}
+{"t":{"$date":"2026-10-31T01:27:30.058+00:00"},"s":"I",  "c":"REPL",     "id":21331,   "ctx":"OplogApplier-0","msg":"Transition to primary complete; database writes are now permitted","attr":{"term":2}}
+{"t":{"$date":"2026-10-31T01:29:14.748+00:00"},"s":"I",  "c":"REPL",     "id":21475,   "ctx":"ReplCoord-13","msg":"Stepping down from primary in response to heartbeat"}
+{"t":{"$date":"2026-10-31T01:29:24.967+00:00"},"s":"I",  "c":"ELECTION", "id":4615655, "ctx":"ReplCoord-5","msg":"Not starting an election, since we are not electable","attr":{"reason":"Not standing for election because I cannot see a majority (mask 0x1)"}}
+{"t":{"$date":"2026-10-31T01:29:35.141+00:00"},"s":"I",  "c":"ELECTION", "id":4615655, "ctx":"ReplCoord-5","msg":"Not starting an election, since we are not electable","attr":{"reason":"Not standing for election because I cannot see a majority (mask 0x1)"}}
+{"t":{"$date":"2026-10-31T01:29:46.613+00:00"},"s":"I",  "c":"ELECTION", "id":4615652, "ctx":"ReplCoord-13","msg":"Starting an election, since we've seen no PRIMARY in election timeout period","attr":{"electionTimeoutPeriodMillis":10000}}
+{"t":{"$date":"2026-10-31T01:29:46.635+00:00"},"s":"I",  "c":"ELECTION", "id":21450,   "ctx":"ReplCoord-16","msg":"Election succeeded, assuming primary role","attr":{"term":3}}
+{"t":{"$date":"2026-10-31T01:29:46.658+00:00"},"s":"I",  "c":"REPL",     "id":6015310, "ctx":"OplogApplier-0","msg":"Starting to transition to primary."}
+{"t":{"$date":"2026-10-31T01:29:46.660+00:00"},"s":"I",  "c":"REPL",     "id":6015309, "ctx":"OplogApplier-0","msg":"Logging transition to primary to oplog on stepup"}
+{"t":{"$date":"2026-10-31T01:29:46.661+00:00"},"s":"I",  "c":"REPL",     "id":21331,   "ctx":"OplogApplier-0","msg":"Transition to primary complete; database writes are now permitted","attr":{"term":3}}

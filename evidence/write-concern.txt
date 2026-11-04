@@ -1,0 +1,12 @@
+ Container ti4601-app-mongo-run-4a008a6f2ef5 Creating 
+ Container ti4601-app-mongo-run-4a008a6f2ef5 Created 
+OK: las cuatro variantes devolvieron la cantidad esperada de muestras
+
+variante         n   p50_ms   p95_ms   p99_ms    ops/s
+w1             300     2.61     9.30    12.73      270
+w1_journal     300    12.52    29.31    49.40       67
+majority       300    15.98    32.17    40.67       56
+w3             300    14.44    29.33    40.21       61
+
+Muestras crudas: evidence/write-concern.csv
+Declare en el informe: máquina, RAM, SO, n, calentamiento y que los tres miembros comparten una sola computadora (sin latencia de red real).

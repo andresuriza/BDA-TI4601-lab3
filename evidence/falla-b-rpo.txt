@@ -1,0 +1,11 @@
+Corrida r4309560e
+  intentos .............. 84
+  confirmados (ok) ...... 78
+  con error ............. 6
+  presentes en la base .. 78  (readConcern majority)
+  PERDIDOS (confirmados ausentes) ......... 0  []
+  errores que SÍ se escribieron ........... 0  []
+  errores que NO se escribieron ........... 6
+  inesperados (presentes, nunca intentados) 0
+
+RPO observado sobre operaciones confirmadas: 0 (ninguna se perdió)

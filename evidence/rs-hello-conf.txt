@@ -1,0 +1,106 @@
+== db.hello()
+{
+  topologyVersion: {
+    processId: ObjectId('6ae5419e2447d91023e81f10'),
+    counter: Long('6')
+  },
+  hosts: [
+    'mongo-1:27017',
+    'mongo-2:27017',
+    'mongo-3:27017'
+  ],
+  setName: 'rs-lab3',
+  setVersion: 1,
+  isWritablePrimary: true,
+  secondary: false,
+  primary: 'mongo-1:27017',
+  me: 'mongo-1:27017',
+  electionId: ObjectId('7fffffff0000000000000001'),
+  lastWrite: {
+    opTime: {
+      ts: Timestamp({ t: 1793409488, i: 16 }),
+      t: Long('1')
+    },
+    lastWriteDate: ISODate('2026-10-31T01:18:08.000Z'),
+    majorityOpTime: {
+      ts: Timestamp({ t: 1793409488, i: 16 }),
+      t: Long('1')
+    },
+    majorityWriteDate: ISODate('2026-10-31T01:18:08.000Z')
+  },
+  maxBsonObjectSize: 16777216,
+  maxMessageSizeBytes: 48000000,
+  maxWriteBatchSize: 100000,
+  localTime: ISODate('2026-10-31T01:18:25.292Z'),
+  logicalSessionTimeoutMinutes: 30,
+  connectionId: 126,
+  minWireVersion: 0,
+  maxWireVersion: 25,
+  readOnly: false,
+  ok: 1,
+  '$clusterTime': {
+    clusterTime: Timestamp({ t: 1793409488, i: 16 }),
+    signature: {
+      hash: Binary.createFromBase64('AAAAAAAAAAAAAAAAAAAAAAAAAAA=', 0),
+      keyId: Long('0')
+    }
+  },
+  operationTime: Timestamp({ t: 1793409488, i: 16 })
+}
+== rs.conf()
+{
+  _id: 'rs-lab3',
+  version: 1,
+  term: 1,
+  members: [
+    {
+      _id: 0,
+      host: 'mongo-1:27017',
+      arbiterOnly: false,
+      buildIndexes: true,
+      hidden: false,
+      priority: 1,
+      tags: {},
+      secondaryDelaySecs: Long('0'),
+      votes: 1
+    },
+    {
+      _id: 1,
+      host: 'mongo-2:27017',
+      arbiterOnly: false,
+      buildIndexes: true,
+      hidden: false,
+      priority: 1,
+      tags: {},
+      secondaryDelaySecs: Long('0'),
+      votes: 1
+    },
+    {
+      _id: 2,
+      host: 'mongo-3:27017',
+      arbiterOnly: false,
+      buildIndexes: true,
+      hidden: false,
+      priority: 1,
+      tags: {},
+      secondaryDelaySecs: Long('0'),
+      votes: 1
+    }
+  ],
+  protocolVersion: Long('1'),
+  writeConcernMajorityJournalDefault: true,
+  settings: {
+    chainingAllowed: true,
+    heartbeatIntervalMillis: 2000,
+    heartbeatTimeoutSecs: 10,
+    electionTimeoutMillis: 10000,
+    catchUpTimeoutMillis: -1,
+    catchUpTakeoverDelayMillis: 30000,
+    getLastErrorModes: {},
+    getLastErrorDefaults: {
+      w: 1,
+      wtimeout: 0
+    },
+    replicaSetId: ObjectId('6ae541c52447d91023e81f18')
+  }
+}

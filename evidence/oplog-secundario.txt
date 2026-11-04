@@ -1,0 +1,11 @@
+--- mongo-2 (secundario): lectura
+hello.secondary=true
+{
+  _id: 'ORD-MANUAL-1',
+  evento_id: 'EV-0001',
+  zona: 'General',
+  cantidad: 2,
+  estado: 'confirmada'
+}
+--- mongo-2 (secundario): insertOne ORD-NO
+NotWritablePrimary (code 10107): not primary

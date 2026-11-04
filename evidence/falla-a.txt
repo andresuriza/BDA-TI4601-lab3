@@ -1,0 +1,87 @@
+[Falla A] run=rcb280d4f w=majority wtimeout=2000 ms retryWrites=True
+antes-falla   ok    seq=0         17.1 ms 
+antes-falla   ok    seq=1         10.4 ms 
+antes-falla   ok    seq=2          9.5 ms 
+antes-falla   ok    seq=3          9.1 ms 
+antes-falla   ok    seq=4         11.8 ms 
+antes-falla   ok    seq=5         13.8 ms 
+antes-falla   ok    seq=6         10.7 ms 
+antes-falla   ok    seq=7         10.6 ms 
+antes-falla   ok    seq=8         11.3 ms 
+antes-falla   ok    seq=9         10.8 ms 
+antes-falla   ok    seq=10         9.8 ms 
+antes-falla   ok    seq=11        23.3 ms 
+antes-falla   ok    seq=12        10.5 ms 
+antes-falla   ok    seq=13        19.1 ms 
+antes-falla   ok    seq=14        13.4 ms 
+antes-falla   ok    seq=15        16.1 ms 
+antes-falla   ok    seq=16        20.6 ms 
+antes-falla   ok    seq=17        22.9 ms 
+antes-falla   ok    seq=18        37.9 ms 
+antes-falla   ok    seq=19        59.6 ms 
+despues-falla ok    seq=20        22.0 ms 
+despues-falla ok    seq=21        23.2 ms 
+despues-falla ok    seq=22        12.5 ms 
+despues-falla ok    seq=23        16.3 ms 
+despues-falla ok    seq=24        24.3 ms 
+despues-falla ok    seq=25        20.6 ms 
+despues-falla ok    seq=26        19.2 ms 
+despues-falla ok    seq=27        17.0 ms 
+despues-falla ok    seq=28        10.5 ms 
+despues-falla ok    seq=29        15.7 ms 
+despues-falla ok    seq=30        15.8 ms 
+despues-falla ok    seq=31         9.1 ms 
+despues-falla ok    seq=32        10.9 ms 
+despues-falla ok    seq=33         9.4 ms 
+despues-falla ok    seq=34        15.8 ms 
+despues-falla ok    seq=35         8.6 ms 
+despues-falla ok    seq=36        23.5 ms 
+despues-falla ok    seq=37        10.3 ms 
+despues-falla ok    seq=38         9.7 ms 
+despues-falla ok    seq=39         9.2 ms 
+despues-falla ok    seq=40         9.5 ms 
+despues-falla ok    seq=41       421.7 ms 
+despues-falla ok    seq=42        47.5 ms 
+despues-falla ok    seq=43        10.1 ms 
+despues-falla ok    seq=44        18.7 ms 
+despues-falla ok    seq=45        27.2 ms 
+despues-falla ok    seq=46        13.0 ms 
+despues-falla ok    seq=47        25.5 ms 
+despues-falla ok    seq=48        11.6 ms 
+despues-falla ok    seq=49        14.7 ms 
+despues-falla ok    seq=50         9.5 ms 
+despues-falla ok    seq=51        12.1 ms 
+despues-falla ok    seq=52         9.5 ms 
+despues-falla ok    seq=53        14.2 ms 
+despues-falla ok    seq=54        13.4 ms 
+despues-falla ok    seq=55        19.7 ms 
+despues-falla ok    seq=56         9.8 ms 
+despues-falla ok    seq=57         9.2 ms 
+despues-falla ok    seq=58        12.4 ms 
+despues-falla ok    seq=59        10.4 ms 
+despues-falla ok    seq=60        14.7 ms 
+despues-falla ok    seq=61        10.8 ms 
+despues-falla ok    seq=62        14.1 ms 
+despues-falla ok    seq=63        15.1 ms 
+despues-falla ok    seq=64         9.2 ms 
+despues-falla ok    seq=65         9.1 ms 
+despues-falla ok    seq=66        20.8 ms 
+despues-falla ok    seq=67        10.3 ms 
+despues-falla ok    seq=68         9.2 ms 
+despues-falla ok    seq=69         9.8 ms 
+despues-falla ok    seq=70         7.8 ms 
+despues-falla ok    seq=71        11.6 ms 
+despues-falla ok    seq=72        21.6 ms 
+despues-falla ok    seq=73        14.7 ms 
+despues-falla ok    seq=74         9.0 ms 
+despues-falla ok    seq=75         9.2 ms 
+despues-falla ok    seq=76         8.4 ms 
+despues-falla ok    seq=77        11.1 ms 
+
+Intentos: 78 · confirmados: 78 · errores: 0
+Latencia de escrituras confirmadas antes-falla  : n=20   p50=11.8 ms  p99=59.6 ms  máx=59.6 ms
+Latencia de escrituras confirmadas despues-falla: n=58   p50=12.1 ms  p99=421.7 ms  máx=421.7 ms
+Primera escritura confirmada tras la señal: seq=20 a 266 ms de la falla (compruébelo en el CSV).
+No hubo errores tras la señal: la falla no interrumpió las escrituras.
+
+Evidencia: evidence/falla-a.csv  (run=rcb280d4f)
