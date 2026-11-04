@@ -73,7 +73,35 @@ def comprar_entradas(
     Anote en el informe qué ocurre si el proceso muere entre los pasos 2 y 4, y cómo
     lo detectaría (Paso 8, pregunta 3).
     """
-    raise NotImplementedError("TODO 3: comprar_entradas")
+    # 1) Registrar la orden; el _id único detecta los reintentos.
+    try:
+        db[ordenes].insert_one(
+            {
+                "_id": orden_id,
+                "evento_id": evento_id,
+                "zona": zona,
+                "cantidad": cantidad,
+                "estado": "pendiente",
+                "creada_en": datetime.now(timezone.utc),
+            }
+        )
+    except DuplicateKeyError:
+        previa = db[ordenes].find_one({"_id": orden_id})
+        return previa["estado"]
+
+    # 2) Una sola operación atómica: filtro y $inc sobre el mismo elemento ($elemMatch + $).
+    res = db[eventos].update_one(
+        {
+            "_id": evento_id,
+            "zonas": {"$elemMatch": {"nombre": zona, "disponibles": {"$gte": cantidad}}},
+        },
+        {"$inc": {"zonas.$.disponibles": -cantidad}},
+    )
+
+    # 3) Estado final de la orden.
+    estado = "confirmada" if res.modified_count == 1 else "agotada"
+    db[ordenes].update_one({"_id": orden_id}, {"$set": {"estado": estado}})
+    return estado
 
 
 def preparar(db: Database, entradas: int) -> None:

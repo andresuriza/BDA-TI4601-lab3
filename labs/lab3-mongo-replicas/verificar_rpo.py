@@ -48,7 +48,12 @@ def calcular_rpo(
 
     Son operaciones entre conjuntos: no necesita ciclos.
     """
-    raise NotImplementedError("TODO 5: calcular_rpo")
+    return {
+        "perdidos": confirmados - presentes,
+        "desconocidos_presentes": sin_confirmar & presentes,
+        "desconocidos_ausentes": sin_confirmar - presentes,
+        "inesperados": presentes - confirmados - sin_confirmar,
+    }
 
 
 def autotest() -> int:
